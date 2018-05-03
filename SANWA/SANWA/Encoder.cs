@@ -21,7 +21,7 @@ namespace SANWA.Utility
         public Encoder(string supplier)
         {
             ContainerSet containerSet;
-
+            //test
             try
             {
                 Supplier = supplier.ToUpper();
