@@ -187,6 +187,7 @@ namespace SANWA.Utility
 
             return result;
         }
+
         public string TDKFinCommand(string Command)
         {
             string result = "";

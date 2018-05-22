@@ -10,3 +10,12 @@ C:\Users\jevons_chan\source\repos\SANWA Function\SANWA\SANWA\obj\Debug\SANWA.csp
 C:\Users\jevons_chan\source\repos\SANWA Function\SANWA\SANWA\obj\Debug\SANWA.dll
 C:\Users\jevons_chan\source\repos\SANWA Function\SANWA\SANWA\obj\Debug\SANWA.pdb
 C:\Users\jevons_chan\source\repos\SANWA Function\SANWA\SANWA\obj\Debug\SANWA.csprojResolveAssemblyReference.cache
+D:\SourceCode\SANWA Function\SANWA\SANWA\bin\Debug\SANWA.dll
+D:\SourceCode\SANWA Function\SANWA\SANWA\bin\Debug\SANWA.pdb
+D:\SourceCode\SANWA Function\SANWA\SANWA\obj\Debug\SANWA.csproj.CoreCompileInputs.cache
+D:\SourceCode\SANWA Function\SANWA\SANWA\obj\Debug\SANWA.dll
+D:\SourceCode\SANWA Function\SANWA\SANWA\obj\Debug\SANWA.pdb
+D:\SourceCode\SANWA Function\SANWA\SANWA\bin\Debug\nmodbuspc.dll
+D:\SourceCode\SANWA Function\SANWA\SANWA\obj\Debug\SANWA.csproj.CopyComplete
+D:\SourceCode\SANWA Function\SANWA\SANWA\bin\Debug\log4net.dll
+D:\SourceCode\SANWA Function\SANWA\SANWA\obj\Debug\SANWA.csprojAssemblyReference.cache
