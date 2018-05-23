@@ -5814,4 +5814,94 @@
     <Code_Cause>KAWASAKI</Code_Cause>
     <Code_Cause_English />
   </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Reports combined status.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>CSTA,</Code_ID>
+    <Code_Cause>Reports combined status.</Code_Cause>
+    <Code_Cause_English>Reports combined status.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Aligns wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>ALGN,</Code_ID>
+    <Code_Cause>Aligns wafer.</Code_Cause>
+    <Code_Cause_English>Aligns wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Reports offset value of aligner.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RAOF,</Code_ID>
+    <Code_Cause>Reports offset value of aligner.</Code_Cause>
+    <Code_Cause_English>Reports offset value of aligner.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Turns servo ON.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>SERV,</Code_ID>
+    <Code_Cause>Turns servo ON.</Code_Cause>
+    <Code_Cause_English>Turns servo ON.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Turns servo OFF.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>STOP,</Code_ID>
+    <Code_Cause>Turns servo OFF.</Code_Cause>
+    <Code_Cause_English>Turns servo OFF.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Reports set robot speed.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RSPD,</Code_ID>
+    <Code_Cause>Reports set robot speed.</Code_Cause>
+    <Code_Cause_English>Reports set robot speed.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Grips wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>HOLD,</Code_ID>
+    <Code_Cause>Grips wafer.</Code_Cause>
+    <Code_Cause_English>Grips wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Releases wafer.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>RELS,</Code_ID>
+    <Code_Cause>Releases wafer.</Code_Cause>
+    <Code_Cause_English>Releases wafer.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Moves to absolute position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MOVA,</Code_ID>
+    <Code_Cause>Moves to absolute position.</Code_Cause>
+    <Code_Cause_English>Moves to absolute position.</Code_Cause_English>
+  </Table>
+  <Table>
+    <Category_ID>KAWASAKI.Aligner</Category_ID>
+    <Category_Description>Aligner 命令</Category_Description>
+    <Code_Name>Moves to relative position.</Code_Name>
+    <Code_Type>CMD</Code_Type>
+    <Code_ID>MOVR,</Code_ID>
+    <Code_Cause>Moves to relative position.</Code_Cause>
+    <Code_Cause_English>Moves to relative position.</Code_Cause_English>
+  </Table>
 </DocumentElement>

@@ -19,3 +19,12 @@ D:\SourceCode\SANWA Function\SANWA\SANWA\bin\Debug\nmodbuspc.dll
 D:\SourceCode\SANWA Function\SANWA\SANWA\obj\Debug\SANWA.csproj.CopyComplete
 D:\SourceCode\SANWA Function\SANWA\SANWA\bin\Debug\log4net.dll
 D:\SourceCode\SANWA Function\SANWA\SANWA\obj\Debug\SANWA.csprojAssemblyReference.cache
+D:\SourceCode\SANWA-Function-For-Test\SANWA\SANWA\bin\Debug\SANWA.dll
+D:\SourceCode\SANWA-Function-For-Test\SANWA\SANWA\bin\Debug\SANWA.pdb
+D:\SourceCode\SANWA-Function-For-Test\SANWA\SANWA\bin\Debug\log4net.dll
+D:\SourceCode\SANWA-Function-For-Test\SANWA\SANWA\bin\Debug\nmodbuspc.dll
+D:\SourceCode\SANWA-Function-For-Test\SANWA\SANWA\obj\Debug\SANWA.csproj.CoreCompileInputs.cache
+D:\SourceCode\SANWA-Function-For-Test\SANWA\SANWA\obj\Debug\SANWA.csproj.CopyComplete
+D:\SourceCode\SANWA-Function-For-Test\SANWA\SANWA\obj\Debug\SANWA.dll
+D:\SourceCode\SANWA-Function-For-Test\SANWA\SANWA\obj\Debug\SANWA.pdb
+D:\SourceCode\SANWA-Function-For-Test\SANWA\SANWA\obj\Debug\SANWA.csprojAssemblyReference.cache

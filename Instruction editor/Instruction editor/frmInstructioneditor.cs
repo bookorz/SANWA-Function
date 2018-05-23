@@ -529,31 +529,34 @@ namespace Instruction_editor
             //SANWA.Utility.FTP fTP = new SANWA.Utility.FTP("192.168.0.5", "21", string.Empty, "admin", string.Empty);
             //string path = fTP.Get("Image.bmp", "Image.bmp", "D:\\temp\\");
 
-            try
-            {
+            SANWA.Utility.Decoder decoder = new SANWA.Utility.Decoder("KAWASAKICONTROLLER");
+            decoder.GetMessage("<MesID,Error,Error#,DeviceCode,ErrorMessage>CS[CRLF] ");
 
-                iCPcon = new SANWA.Utility.EncoderDIO.ICPcon((ushort)8, ModbusIpMaster.CreateIp(tcpClient));
+            //try
+            //{
 
-                if (SckTd == null)
-                {
-                    SckTd = new Thread(ConnectTest);
-                    SckTd.IsBackground = true;
-                    SckTd.Start();
-                }
+            //    iCPcon = new SANWA.Utility.EncoderDIO.ICPcon((ushort)8, ModbusIpMaster.CreateIp(tcpClient));
 
-                bool[] status = iCPcon.ReadInputs(1, 1);
+            //    if (SckTd == null)
+            //    {
+            //        SckTd = new Thread(ConnectTest);
+            //        SckTd.IsBackground = true;
+            //        SckTd.Start();
+            //    }
 
-                //bool[] status1 = iCPcon.ReadCoils(1, 1);
+            //    bool[] status = iCPcon.ReadInputs(1, 1);
 
-                iCPcon.WriteSingleCoil(1, 7, true);
+            //    //bool[] status1 = iCPcon.ReadCoils(1, 1);
 
-                bool[] status1 = iCPcon.ReadCoils(1, 1);
+            //    iCPcon.WriteSingleCoil(1, 7, true);
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            //    bool[] status1 = iCPcon.ReadCoils(1, 1);
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.ToString());
+            //}
         }
 
         private void ConnectTest()

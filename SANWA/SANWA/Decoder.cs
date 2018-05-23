@@ -31,6 +31,10 @@ namespace SANWA.Utility
 					    result = TDKCodeAnalysis(Message);
 					    break;
 
+                    case "KAWASAKICONTROLLER":
+                        result = KAWASAKICodeAnalysis(Message);
+                        break;
+
                     default:
                         throw new NotImplementedException();
 
@@ -95,6 +99,62 @@ namespace SANWA.Utility
                                 break;
                             case 2:
                                 each.Value = content[i];
+                                break;
+                        }
+                    }
+                    result.Add(each);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+
+            return result;
+        }
+
+        private List<ReturnMessage> KAWASAKICodeAnalysis(string Message)
+        {
+            List<ReturnMessage> result;
+            string[] msgAry;
+
+            try
+            {
+                result = new List<ReturnMessage>();
+                msgAry = Message.Replace("\r\n", "\r").Split('\r');
+
+                foreach (string Msg in msgAry)
+                {
+                    if (Msg.Trim().Equals(""))
+                    {
+                        continue;
+                    }
+                    ReturnMessage each = new ReturnMessage();
+
+                    each.Command = Msg.Substring(Msg.IndexOf('<') + 1, Msg.IndexOf('>') - Msg.IndexOf('<') - 1);
+                    string[] content = each.Command.Split(',');
+                    for (int i = 0; i < content.Length; i++)
+                    {
+                        switch (i)
+                        {
+                            case 1:
+
+                                switch (content[i])
+                                {
+                                    case "Nak":
+                                        each.Type = ReturnMessage.ReturnType.Abnormal;
+                                        each.Value = content[2];
+                                        break;
+                                    case "Success":
+                                        each.Type = ReturnMessage.ReturnType.Excuted;
+                                        each.Value = content[2];
+                                        break;
+                                    case "Error":
+                                        each.Type = ReturnMessage.ReturnType.Error;
+                                        each.NodeAdr = content[3].ToString();
+                                        each.Value = content[2] + ":" + content[4];
+                                        break;
+                                }
                                 break;
                         }
                     }
@@ -188,7 +248,7 @@ namespace SANWA.Utility
             return result;
         }
 
-        public string TDKFinCommand(string Command)
+        private string TDKFinCommand(string Command)
         {
             string result = "";
             //string strCommsnd = string.Empty;
@@ -215,7 +275,7 @@ namespace SANWA.Utility
             return result;
         }
 
-        public string TDKCheckSum(string Len, string Message)
+        private string TDKCheckSum(string Len, string Message)
         {
             string strCheckSum = string.Empty;
             string csHex = string.Empty;
