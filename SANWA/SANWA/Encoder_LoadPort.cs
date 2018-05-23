@@ -92,12 +92,15 @@ namespace SANWA.Utility
             }
         }
 
-        /// <summary>
-        /// Reset
-        /// </summary>
-        /// <param name="commandType"> Command Type </param>
-        /// <returns></returns>
-        public string Reset(CommandType commandType)
+
+    
+
+    /// <summary>
+    /// Reset
+    /// </summary>
+    /// <param name="commandType"> Command Type </param>
+    /// <returns></returns>
+    public string Reset(CommandType commandType)
         {
             return CommandAssembly(Supplier, commandType.ToString().Equals("Finish") ? "FIN" : "SET", "Reset");
         }
@@ -610,25 +613,6 @@ namespace SANWA.Utility
             return CommandAssembly(Supplier, commandType.ToString().Equals("Finish") ? "FIN" : "MOV", "Resum");
         }
 
-        /// <summary>
-        ///  Alarm Quantity
-        /// </summary>
-        /// <returns></returns>
-        public string AlarmQuantity()
-        {
-            return CommandAssembly(Supplier, "GET", "AlarmQuantity");
-        }
-
-        /// <summary>
-        ///  Alarm History
-        /// </summary>
-        /// <returns></returns>
-        public string AlarmHistory(int AlarmNo)
-        {
-            string steMessage = CommandAssembly(Supplier, "GET", "AlarmHistory");
-            return AlarmNo > 0 ? steMessage + "/" + AlarmNo.ToString() : steMessage;
-        }
-
         private string CommandAssembly(string Supplier, string CommandType, string Command, params string[] Parameter)
         {
             string strCommand = string.Empty;
@@ -701,11 +685,13 @@ namespace SANWA.Utility
 
             try
             {
+                strLen = Convert.ToString(Command.Length + 4, 16).PadLeft(2, '0');
+                
                 chrLH = Convert.ToInt32(strLen.Substring(0, 1), 16);
                 chrLL = Convert.ToInt32(strLen.Substring(1, 1), 16);
-                strLen = Convert.ToChar(chrLH).ToString() + Convert.ToChar(chrLL).ToString();
-                sCheckSum = ProcCheckSum(strLen, Command);
-                strCommsnd = string.Format("{0}{1}{2}{3}{4}{5}{6}{7}", Convert.ToChar(1), strLen, Convert.ToChar(48), string.Empty, Convert.ToChar(48), Command, sCheckSum, Convert.ToChar(3));
+        strLen = Convert.ToChar(chrLH).ToString() + Convert.ToChar(chrLL).ToString();
+        sCheckSum = ProcCheckSum(strLen, Command);
+        strCommsnd = string.Format("{0}{1}{2}{3}{4}{5}{6}{7}", Convert.ToChar(1), strLen, Convert.ToChar(48), string.Empty, Convert.ToChar(48), Command, sCheckSum, Convert.ToChar(3));
             }
             catch (Exception ex)
             {
@@ -719,15 +705,11 @@ namespace SANWA.Utility
         {
             string strCommsnd = string.Empty;
             string strLen = string.Empty;
-            int chrLH = 0;
-            int chrLL = 0;
 
             try
             {
                 strLen = Convert.ToString(Command.Length + 4, 16).PadLeft(2, '0');
-                chrLH = Convert.ToInt32(strLen.Substring(0, 1), 16);
-                chrLL = Convert.ToInt32(strLen.Substring(1, 1), 16);
-                strCommsnd = string.Format("{0}{1}{2}{3}{4}", Convert.ToChar("s"), Convert.ToChar(chrLH), Convert.ToChar(chrLL), Command, Convert.ToChar(13));
+                strCommsnd = string.Format("{0}{1}{2}{3}", Convert.ToChar("s"), strLen, Command, Convert.ToChar(13));
             }
             catch (Exception ex)
             {

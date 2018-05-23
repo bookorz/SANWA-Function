@@ -42,7 +42,7 @@ namespace SANWA.Utility
                 Aligner = new EncoderAligner(Supplier, dtCommand);
                 Robot = new EncoderRobot(Supplier, dtCommand);
                 OCR = new EncoderOCR(Supplier, dtCommand);
-                LoadPort = new EncoderLoadPort(Supplier, dtCommand, EncoderLoadPort.CommandMode.TDK_B);
+                LoadPort = new EncoderLoadPort(Supplier, dtCommand, EncoderLoadPort.CommandMode.TDK_A);
             }
             catch (Exception ex)
             {

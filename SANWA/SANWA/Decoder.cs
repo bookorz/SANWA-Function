@@ -188,7 +188,7 @@ namespace SANWA.Utility
 
 
                 each.NodeAdr = Encoding.Default.GetString(t, 3, 2);
-                string contentStr = Encoding.Default.GetString(t, 5, t.Length - 7).Replace(";", "");
+                string contentStr = Encoding.Default.GetString(t, 5, t.Length - 5 - 3).Replace(";", "").Trim();
 
                 string[] content = contentStr.Split(':', '/');
 
@@ -238,7 +238,7 @@ namespace SANWA.Utility
                 }
 
                 result.Add(each);
-                
+
             }
             catch (Exception ex)
             {
